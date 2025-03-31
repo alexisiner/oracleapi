@@ -1,0 +1,170 @@
+create table Grupos (
+    id_grupo NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    carrera VARCHAR2(100) NOT NULL,
+    periodo VARCHAR2(100) NOT NULL
+    )
+    
+CREATE TABLE Materias (
+    id_materia NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    nombre_materia VARCHAR2(100) not null,
+    nombre_profesor varchar2 (100),
+    id_grupo NUMBER  NOT NULL,
+    
+    CONSTRAINT fk_materias_grupos FOREIGN KEY (id_grupo)
+        REFERENCES Grupos (id_grupo)
+)
+
+
+CREATE TABLE Alumnos (
+
+    id_alumno NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    nombre_alumno varchar2(100) NOT NULL,
+    apellido_alumno varchar(100),
+    bday_alumno DATE DEFAULT SYSDATE,
+    correo_alumno VARCHAR2(100),
+    id_grupo NUMBER not null,
+    
+    CONSTRAINT pk_alumnos_grupos FOREIGN KEY (id_grupo)
+        REFERENCES Grupos(id_grupo)
+)   
+    
+INSERT INTO Grupos(carrera,periodo) VALUES('Ingeniería en Computación','2024-1');
+INSERT INTO Grupos(carrera,periodo) VALUES('Ingeniería en Computación','2024-2');
+INSERT INTO Grupos(carrera,periodo) VALUES('Ingeniería Mecánica','2024-1');
+INSERT INTO Grupos(carrera,periodo) VALUES('Ingeniería en Comunicaciones','2024-1');
+INSERT INTO Grupos(carrera,periodo) VALUES('Ingeniería Mecánica','2023-2');
+
+
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Programación I','Dr. Carlos Méndez',1);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Estructuras de Datos','Dra. Ana López',1);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Bases de Datos','Mtro. Juan Pérez',1);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Redes de Computadoras','Ing. Luis García',2);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Inteligencia Artificial','Dra. Sofía Ramírez',2);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Termodinámica','Dr. Roberto Jiménez',3);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Mecánica de Fluidos','Ing. Patricia Castro',3);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Dibujo Mecánico','Mtro. Jorge Silva',3);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Resistencia de Materiales','Dr. Fernando Ortega',5);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Dinámica de Máquinas','Ing. Adrián Mendoza',5);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Teoría de las Comunicaciones','Dra. Laura Díaz',4);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Señales y Sistemas','Dr. Ricardo Torres',4);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Electrónica de Comunicaciones','Ing. Gabriela Ruiz',4);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Redes de Telecomunicaciones','Mtro. Óscar Vargas',4);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Matemáticas Avanzadas','Dr. Eduardo Martínez',1);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Física Aplicada','Dra. Carmen Sánchez',3);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Ética Profesional','Lic. Claudia Núñez',2);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Inglés Técnico','Prof. David Wilson',4);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Administración de Proyectos','Lic. Javier Romero',5);
+INSERT INTO Materias(nombre_materia,nombre_profesor,id_grupo) VALUES ('Sistemas Operativos','Ing. Daniel Flores',2);
+
+
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('María','Gómez',To_date('22/07/2001','DD/MM/YYYY'),'maria.gomez@email.com',1);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Carlos','López',To_date('10/11/1999','DD/MM/YYYY'),'carlos.lopez@email.com',1);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Ana','Martínez',To_date('05/05/2000','DD/MM/YYYY'),'ana.martinez@email.com',1);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Luis','Hernández',To_date('18/09/2001','DD/MM/YYYY'),'luis.hernandez@email.com',1);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Sofía','Díaz',To_date('30/01/2000','DD/MM/YYYY'),'sofia.diaz@email.com',2);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Pedro','Sánchez',To_date('12/12/1999','DD/MM/YYYY'),'pedro.sanchez@email.com',2);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Laura','Ramírez',To_date('25/06/2001','DD/MM/YYYY'),'laura.ramirez@email.com',2);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Jorge','Torres',To_date('08/08/2000','DD/MM/YYYY'),'jorge.torres@email.com',2);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Patricia','Castro',To_date('14/02/2001','DD/MM/YYYY'),'patricia.castro@email.com',2);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Roberto','Jiménez',To_date('19/04/1999','DD/MM/YYYY'),'roberto.jimenez@email.com',3);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Fernanda','Ortega',To_date('03/07/2000','DD/MM/YYYY'),'fernanda.ortega@email.com',3);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Adrián','Mendoza',To_date('27/10/2001','DD/MM/YYYY'),'adrian.mendoza@email.com',3);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Gabriela','Ruiz',To_date('11/05/2000','DD/MM/YYYY'),'gabriela.ruiz@email.com',3);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Óscar','Vargas',To_date('09/09/1999','DD/MM/YYYY'),'oscar.vargas@email.com',3);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Claudia','Núñez',To_date('21/12/2000','DD/MM/YYYY'),'claudia.nunez@email.com',5);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Javier','Romero',To_date('06/03/2001','DD/MM/YYYY'),'javier.romero@email.com',5);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Daniel','Flores',To_date('17/08/1999','DD/MM/YYYY'),'daniel.flores@email.com',5);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Armando','Herrera',To_date('29/01/2000','DD/MM/YYYY'),'armando.herrera@email.com',5);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Carmen','Sánchez',To_date('13/06/2001','DD/MM/YYYY'),'carmen.sanchez@email.com',5);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Ricardo','Torres',To_date('07/04/2000','DD/MM/YYYY'),'ricardo.torres@email.com',4);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Eduardo','Martínez',To_date('20/11/1999','DD/MM/YYYY'),'eduardo.martinez@email.com',4);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('David','Wilson',To_date('02/02/2001','DD/MM/YYYY'),'david.wilson@email.com',4);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Verónica','Guzmán',To_date('16/09/2000','DD/MM/YYYY'),'veronica.guzman@email.com',4);
+INSERT INTO alumnos (nombre_alumno, apellido_alumno,bday_alumno,correo_alumno,id_grupo)VALUES ('Alejandro','Moreno',To_date('24/05/1999','DD/MM/YYYY'),'alejandro.moreno@email.com',4);
+
+
+select * from alumnos;
+select * from grupos;
+select * from materias;
+
+
+select * from alumnos where id_grupo = 2;
+select * from grupos where id_grupo = 2;
+select * from materias where id_grupo = 2;
+
+select a.nombre_alumno, a.apellido_alumno, g.carrera, m.nombre_materia from alumnos a 
+inner join grupos g
+on a.id_grupo = g.id_grupo
+inner join materias m 
+on a.id_grupo = m.id_grupo
+where a.id_grupo = 3;
+
+CREATE OR REPLACE  PROCEDURE HolaMundo (nombre IN varchar2)
+IS
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Hola mi nombre es' || nombre);
+END;
+      
+SET SERVEROUTPUT ON;
+EXECUTE HolaMundo(' Alex');
+    
+-----------------------------STORE PROCEDURE CON PARAMETROS DE SALIDA, OSEA QUE DEVUELVE UNA CONSULTA----------
+    
+CREATE OR REPLACE PROCEDURE Lista (cursorMemoria OUT SYS_REFCURSOR, p_id_alumno in number)
+AS
+BEGIN
+    OPEN cursorMemoria FOR
+    select a.nombre_alumno, a.apellido_alumno, g.carrera, m.nombre_materia from alumnos a 
+    inner join grupos g
+    on a.id_grupo = g.id_grupo
+    inner join materias m 
+    on a.id_grupo = m.id_grupo
+    where a.id_alumno = p_id_alumno;
+END;
+    
+
+SET AUTOPRINT ON;
+
+VARIABLE cusorMemoria REFCURSOR;
+EXECUTE Lista (:cusorMemoria,1);
+
+-----------------------------STORE PROCEDURE CON PARAMETROS DE SALIDA, OSEA QUE DEVUELVE UN VALOR----------
+
+CREATE OR REPLACE PROCEDURE ModificarCorreo (
+    cursorMemoria   Out NUMBER, -- parametro de salida
+    p_id_alumno     in  number, -- parametro de entrada
+    p_correo_alumno in  varchar2)-- parametro de entrada
+as
+    v_count NUMBER; -- variabe local
+begin
+
+    select count(*) INTO v_count
+    from alumnos 
+    where id_alumno = p_id_alumno;
+    
+    if v_count = 1 then
+         update alumnos 
+        set correo_alumno = p_correo_alumno
+        where id_alumno = p_id_alumno;
+        cursorMemoria := 1;         -- asi se le asignan valores
+    else
+        cursorMemoria := -1;  
+    end if;
+    
+end;
+
+
+declare 
+    resultado number;
+begin
+    ModificarCorreo (resultado,1000,'holamundo@gmail.com');  ------------ ASI SE DEBE DE DECLARAR  PARA GUARDAR EL VALOR DEVUELTO
+    DBMS_OUTPUT.PUT_LINE('Resultado: ' || resultado);
+end;
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+

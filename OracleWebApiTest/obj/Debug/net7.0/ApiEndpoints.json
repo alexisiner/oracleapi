@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "OracleWebApiTest.Controllers.HomeController",
+    "Method": "Index",
+    "RelativePath": "Home/Index/{idAlumno}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAlumno",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

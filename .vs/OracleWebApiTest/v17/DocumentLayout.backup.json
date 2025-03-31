@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|c:\\users\\alex\\documents\\c#\\oraclewebapitest\\oraclewebapitest\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|solutionrelative:oraclewebapitest\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|c:\\users\\alex\\documents\\c#\\oraclewebapitest\\oraclewebapitest\\repository\\alumnosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|solutionrelative:oraclewebapitest\\repository\\alumnosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|c:\\users\\alex\\documents\\c#\\oraclewebapitest\\oraclewebapitest\\repository\\ialumnosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|solutionrelative:oraclewebapitest\\repository\\ialumnosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|c:\\users\\alex\\documents\\c#\\oraclewebapitest\\oraclewebapitest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|solutionrelative:oraclewebapitest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|c:\\users\\alex\\documents\\c#\\oraclewebapitest\\oraclewebapitest\\configuration\\oracledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|solutionrelative:oraclewebapitest\\configuration\\oracledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|c:\\users\\alex\\documents\\c#\\oraclewebapitest\\oraclewebapitest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|solutionrelative:oraclewebapitest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|c:\\users\\alex\\documents\\c#\\oraclewebapitest\\oraclewebapitest\\models\\materiasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C014FA16-0130-4449-BF66-B26C8A505BFE}|OracleWebApiTest\\OracleWebApiTest.csproj|solutionrelative:oraclewebapitest\\models\\materiasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MateriasDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Models\\MateriasDTO.cs",
+              "RelativeDocumentMoniker": "OracleWebApiTest\\Models\\MateriasDTO.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Models\\MateriasDTO.cs",
+              "RelativeToolTip": "OracleWebApiTest\\Models\\MateriasDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T05:52:13.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "OracleWebApiTest\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Controllers\\HomeController.cs*",
+              "RelativeToolTip": "OracleWebApiTest\\Controllers\\HomeController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T05:36:05.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlumnosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Repository\\AlumnosRepository.cs",
+              "RelativeDocumentMoniker": "OracleWebApiTest\\Repository\\AlumnosRepository.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Repository\\AlumnosRepository.cs",
+              "RelativeToolTip": "OracleWebApiTest\\Repository\\AlumnosRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwC8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T05:19:08.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAlumnosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Repository\\IAlumnosRepository.cs",
+              "RelativeDocumentMoniker": "OracleWebApiTest\\Repository\\IAlumnosRepository.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Repository\\IAlumnosRepository.cs",
+              "RelativeToolTip": "OracleWebApiTest\\Repository\\IAlumnosRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T05:17:57.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\appsettings.json",
+              "RelativeDocumentMoniker": "OracleWebApiTest\\appsettings.json",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\appsettings.json",
+              "RelativeToolTip": "OracleWebApiTest\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-31T05:03:47.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OracleDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Configuration\\OracleDBContext.cs",
+              "RelativeDocumentMoniker": "OracleWebApiTest\\Configuration\\OracleDBContext.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Configuration\\OracleDBContext.cs",
+              "RelativeToolTip": "OracleWebApiTest\\Configuration\\OracleDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T05:00:43.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Program.cs",
+              "RelativeDocumentMoniker": "OracleWebApiTest\\Program.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\C#\\OracleWebApiTest\\OracleWebApiTest\\Program.cs",
+              "RelativeToolTip": "OracleWebApiTest\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T04:49:03.198Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

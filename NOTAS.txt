@@ -1,0 +1,18 @@
+NOTAS
+
+ARQUITECTURA POR CAPAS
+
+Controladores: NombreEntidadController.cs (Ejemplo: AlumnoController.cs).
+
+Servicios: NombreEntidadService.cs (Ejemplo: AlumnoService.cs).
+
+Repositorios: NombreEntidadRepository.cs (Ejemplo: AlumnoRepository.cs). esta es la que usamos , aquí se hacen operaciones crud
+
+Modelos: NombreEntidad.cs (Ejemplo: AlumnoEntity.cs).         modelos de toda la vida, no olvides nombrarlos Entity
+
+Clases de Configuración: NombreConfiguracion.cs o AppSettings.cs.  el dbcontext va aquí, también el middleware.
+
+
+  "ConnectionStrings": {
+    "OracleDBConnection": "User Id=SYSTEM;Password=Deadmau5rt.;Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SID=xe)));"
+  },

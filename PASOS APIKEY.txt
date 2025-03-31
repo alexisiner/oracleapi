@@ -1,0 +1,86 @@
+🔹 1. Crear un Middleware para validar la API Key
+Debes interceptar cada solicitud y verificar si incluye una API Key válida.
+
+Crea un archivo llamado ApiKeyMiddleware.cs en la carpeta Middleware:
+
+
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
+using System.Threading.Tasks;
+
+public class ApiKeyMiddleware
+{
+    private readonly RequestDelegate _next;
+    private const string API_KEY_HEADER_NAME = "X-Api-Key";
+    private readonly string _apiKey;
+
+    public ApiKeyMiddleware(RequestDelegate next, IConfiguration configuration)
+    {
+        _next = next;
+        _apiKey = configuration["ApiKey"]; // Obtener la API Key del appsettings.json
+    }
+
+    public async Task Invoke(HttpContext context)
+    {
+        if (!context.Request.Headers.TryGetValue(API_KEY_HEADER_NAME, out var extractedApiKey))
+        {
+            context.Response.StatusCode = 401; // Unauthorized
+            await context.Response.WriteAsync("API Key is missing");
+            return;
+        }
+
+        if (!_apiKey.Equals(extractedApiKey))
+        {
+            context.Response.StatusCode = 403; // Forbidden
+            await context.Response.WriteAsync("Invalid API Key");
+            return;
+        }
+
+        await _next(context);
+    }
+}
+🔹 2. Agregar la API Key en appsettings.json
+En el archivo appsettings.json, agrega tu API Key:
+
+
+{
+  "ApiKey": "TU_CLAVE_SECRETA"
+}
+🔹 3. Registrar el Middleware en Program.cs
+Modifica Program.cs para agregar el Middleware antes de que se procesen las solicitudes:
+
+
+using APIORACLE.Middleware; // Asegúrate de importar el namespace correcto
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Agregar el Middleware de API Key
+app.UseMiddleware<ApiKeyMiddleware>();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
+app.Run();
+🔹 4. Probar la API con API Key
+Cada vez que llames a tu API, debes incluir la API Key en los encabezados (headers):
+
+Ejemplo de solicitud en Postman o cURL
+
+GET https://localhost:7222/api/alumnos
+Headers:
+  X-Api-Key: TU_CLAVE_SECRETA
+🔹 Conclusión
+✔️ Ahora tu API en .NET está protegida con autenticación mediante API Key.
+✔️ Solo las solicitudes con la clave correcta podrán acceder a los endpoints. 🚀

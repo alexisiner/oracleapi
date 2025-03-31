@@ -1,0 +1,31 @@
+SP PARAMETRO DE SALIDA INT (NUMBER)    
+
+public int ObtenerCantidadAlumnosPorGrupo(int idGrupo)
+    {
+        int totalAlumnos = 0;
+
+        using (OracleConnection conn = new OracleConnection(_connectionString))
+        {
+            conn.Open();
+            using (OracleCommand cmd = new OracleCommand("ObtenerCantidadAlumnos", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Parámetro de entrada
+                cmd.Parameters.Add("p_id_grupo", OracleDbType.Int32).Value = idGrupo;
+
+                // Parámetro de salida
+                OracleParameter outParam = new OracleParameter("p_total_alumnos", OracleDbType.Int32);
+                outParam.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(outParam);
+
+                // Ejecutar el procedimiento
+                cmd.ExecuteNonQuery();
+
+                // Obtener el resultado
+                totalAlumnos = Convert.ToInt32(outParam.Value);
+            }
+        }
+
+        return totalAlumnos;
+    }
